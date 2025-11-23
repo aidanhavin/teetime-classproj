@@ -1,0 +1,10 @@
+{
+  "scripts":
+  {
+      "dev": "concurrently \\\"npm start --prefix backend\\\" \\\"npm start --prefix frontend/teesheet\\\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "proxy": "http://localhost:5000/"
+}
