@@ -26,7 +26,9 @@ export default function AdminBookingsPage({ token, user }) {
       setLoading(false);
       return;
     }
-
+// Clear previous bookings and status before loading new data
+    setBookings([]);
+    setStatus('');
     try {
       setLoading(true);
       setStatus('');
@@ -63,12 +65,12 @@ export default function AdminBookingsPage({ token, user }) {
       return;
     }
     loadBookings();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [token, user]);
 
   async function handleCancel(id) {
     if (!window.confirm('Cancel this booking?')) return;
-
+// Clear status before attempting cancellation
     try {
       const res = await fetch(
         `${API_BASE}/api/admin/bookings/${id}/status`,
@@ -99,7 +101,7 @@ export default function AdminBookingsPage({ token, user }) {
       setStatus('⚠️ Could not reach server.');
     }
   }
-
+// Render the admin bookings page
   return (
     <div className="page">
       <button className="btn back-btn" onClick={() => navigate(-1)}>

@@ -76,7 +76,7 @@ export default function MyBookingsPage({ token }) {
       setStatus('⚠️ Could not reach server.');
     }
   }
-
+// Helper function to format date strings
   function formatDate(dateStr) {
     if (!dateStr) return '';
     const d = new Date(dateStr);

@@ -62,7 +62,7 @@ export default function AdminDashboardPage({ token, user }) {
     try {
       setLoading(true);
       setStatus('');
-
+        // Fetch stats and users in parallel
       const [statsRes, usersRes] = await Promise.all([
         fetch(`${API_BASE}/api/admin/stats`, {
           method: 'GET',
@@ -81,7 +81,7 @@ export default function AdminDashboardPage({ token, user }) {
 
       const statsData = await statsRes.json().catch(() => ({}));
       const usersData = await usersRes.json().catch(() => ({}));
-
+        // Handle errors and set status messages accordingly
       if (!statsRes.ok) {
         setStatus(statsData.msg || 'Could not load admin stats.');
       } else if (!usersRes.ok) {
@@ -98,7 +98,7 @@ export default function AdminDashboardPage({ token, user }) {
       setLoading(false);
     }
   }
-
+// Load admin data on component mount and when token/user changes
   useEffect(() => {
     if (!user || user.role !== 'admin') {
       setStatus('Not authorized.');
@@ -232,7 +232,7 @@ export default function AdminDashboardPage({ token, user }) {
             </table>
           )}
 
-          {/* BOOKINGS BY DATE + FILTER (TIME-BASED TREND + FILTER TOOL) */}
+          {/* BOOKINGS BY DATE + FILTER (TIME BASED TREND + FILTER TOOL) */}
           <h2 style={{ marginTop: '2rem' }}>Bookings by Date</h2>
 
           <div style={{ marginBottom: '1rem' }}>

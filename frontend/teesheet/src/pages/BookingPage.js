@@ -15,7 +15,7 @@ export default function BookingPage({ token }) {
     const dd = String(d.getDate()).padStart(2, '0');
     return `${yyyy}-${mm}-${dd}`;
   });
-
+// State for available tee times
   const [slots, setSlots] = useState([]);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState('');
@@ -28,7 +28,7 @@ export default function BookingPage({ token }) {
     const d = new Date(2000, 0, 1, h, m);
     return d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
   }
-
+// Load available tee times for the selected date
   async function loadSlots(chosenDate = date) {
     try {
       setLoading(true);
@@ -64,7 +64,7 @@ export default function BookingPage({ token }) {
 
     const players = playersBySlot[slot.teeTime] || 1;
 
-    // optional sanity check vs available spots
+    // optional check vs available spots
     if (typeof slot.availableSpots === 'number' && players > slot.availableSpots) {
       setStatus(
         `Only ${slot.availableSpots} spot(s) left at ${formatTime(

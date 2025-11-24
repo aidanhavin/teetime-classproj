@@ -29,7 +29,7 @@ export default function AuthPage({ setUser, setToken }) {
       const res = await fetch(`${API_BASE}/api/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        credentials: 'include', // still fine, but we rely on token below
+        credentials: 'include', // still fine, but I rely on token below
         body: JSON.stringify({
           email: form.email,
           password: form.password,

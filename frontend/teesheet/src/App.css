@@ -1,10 +1,10 @@
-/* ===== Base App ===== */
+/* ===== Base Website ===== */
 
 .App {
   text-align: center;
 }
 
-/* Everything under the fixed navbar */
+/* Everything under the new navbar */
 .main-content {
   margin-top: 80px; /* keeps content below navbar */
 }
@@ -268,7 +268,7 @@ input:disabled {
   text-align: left;
 }
 
-/* ===== React logo demo stuff (unused but harmless) ===== */
+/* ===== React logo demo stuff ===== */
 
 .App-link {
   color: #61dafb;
