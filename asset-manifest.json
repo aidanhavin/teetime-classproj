@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.0f5e3030.css",
-    "main.js": "/static/js/main.d6963a6e.js",
-    "static/js/453.9990c976.chunk.js": "/static/js/453.9990c976.chunk.js",
-    "index.html": "/index.html",
-    "main.0f5e3030.css.map": "/static/css/main.0f5e3030.css.map",
-    "main.d6963a6e.js.map": "/static/js/main.d6963a6e.js.map",
-    "453.9990c976.chunk.js.map": "/static/js/453.9990c976.chunk.js.map"
+    "main.css": "/teetime-classproj/static/css/main.0f5e3030.css",
+    "main.js": "/teetime-classproj/static/js/main.cb814dc2.js",
+    "static/js/453.9990c976.chunk.js": "/teetime-classproj/static/js/453.9990c976.chunk.js",
+    "index.html": "/teetime-classproj/index.html",
+    "main.0f5e3030.css.map": "/teetime-classproj/static/css/main.0f5e3030.css.map",
+    "main.cb814dc2.js.map": "/teetime-classproj/static/js/main.cb814dc2.js.map",
+    "453.9990c976.chunk.js.map": "/teetime-classproj/static/js/453.9990c976.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0f5e3030.css",
-    "static/js/main.d6963a6e.js"
+    "static/js/main.cb814dc2.js"
   ]
 }
