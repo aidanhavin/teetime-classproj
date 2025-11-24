@@ -7,7 +7,7 @@ const API_BASE = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 export default function AdminBookingsPage({ token, user }) {
   const navigate = useNavigate();
-
+// Initialize date to today's date in YYYY-MM-DD format
   const [date, setDate] = useState(() => {
     const d = new Date();
     const yyyy = d.getFullYear();
